@@ -95,25 +95,8 @@ The charts below are included with this README. They show the supplied analysis 
 - **The five displayed amenities have similar linked-record counts.** 24-Hour Security is highest at 8,739 and Home Theater lowest at 8,694. These appear to be counts of property-amenity associations, not an independent measure of guest preference.
 - **Revenue, average booking value, city revenue leaders, property supply leaders, and host leaders are query outputs but no result values were supplied.** Run the SQL to populate those findings before publishing claims about those measures.
 
-## How to Reproduce the Analysis
+## Conclusion
 
-1. Open the Databricks workspace and ensure you have access to the `databricks_wanderbricks_dataset_dais_2025` catalog and `wanderbricks` schema.
-2. Add the supplied SQL query file to a Databricks SQL editor or notebook.
-3. Run each statement. If your catalog or schema differs, update the fully qualified table names first.
-4. Review the result sets for counts, revenue, booking trends, city rankings, host rankings, and amenities.
-5. Export or recreate the charts from the relevant query results, retaining the query filters and date coverage in chart titles or captions.
-6. Record the KPI outputs and refresh the findings above whenever the data changes.
+This project demonstrates how Databricks SQL can be used to analyze Wanderbricks marketplace performance across bookings, revenue, properties, cities, cancellations, hosts, and amenities. The findings highlight booking patterns and areas for further investigation, providing a practical foundation for data-informed business decisions.
 
-### Repository files
 
-- `databricks_sql_github.txt` — SQL queries used in the analysis
-- `monthly_bookings.png` — monthly booking trend
-- `bookings_by_property_type.png` — booking share by property type
-- `cancellations_by_city.png` — top cities by cancellation count
-- `amenities.png` — top amenity association counts
-
-### Notes
-
-- The SQL's `avg(total_amount)` statement aliases the result as `total_revenue`; for clarity in downstream reporting, consider renaming the alias to `avg_booking_value`.
-- The city revenue query sums all booking amounts without filtering to confirmed bookings. Label it as revenue by booking records or align its status filter with the confirmed-revenue KPI before interpreting it as realized revenue.
-- Counts and sums should be interpreted according to the data's grain and status definitions. Validate duplicates, nulls, currency, and date coverage before using results for decisions.
