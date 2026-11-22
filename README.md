@@ -67,25 +67,7 @@ The query file includes:
 11. Top five cities by cancellation count.
 12. Top five amenities by number of linked property-amenity records.
 
-## Visualizations
 
-The charts below are included with this README. They show the supplied analysis outputs; see the notes under Key Findings for interpretation and limitations.
-
-### Monthly bookings by year
-
-![Monthly bookings by year](monthly_bookings.png)
-
-### Bookings by property type
-
-![Total bookings by property type](bookings_by_property_type.png)
-
-### Cancellations by city
-
-![Top cities by cancellations](cancellations_by_city.png)
-
-### Most common amenities
-
-![Top amenities by linked records](amenities.png)
 
 ## Key Findings and Business Insights
 
